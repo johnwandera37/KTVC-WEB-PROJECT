@@ -1,0 +1,1131 @@
+smooth scrolling across the entire webpage *
+html {
+    scroll-behavior: smooth;
+}
+
+
+/* Styles for body and header */
+body, html
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.header {
+    display: flex;
+    /*flex-direction: column;*/
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+
+
+
+
+/* Fixing the header container on top of the page */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Ensures the nav stays on top of other content */
+    background-color: #fff; /* You can change this to suit your design */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow for separation */
+}
+
+
+@media (max-width: 768px) {
+    .navbar {
+        /* Adjustments for mobile if needed */
+    }
+
+    .content {
+        margin-top: 80px; /* Adjust for mobile nav height */
+    }
+}
+
+
+.content {
+    margin-top: 30px; /* Adjust this based on your navbar height */
+}
+
+
+
+
+
+
+.logo-section {
+    display: flex;
+    align-items: center;
+}
+
+.logo, .college-logo {
+    height: 91px;
+    margin-right: 0px;
+}
+
+.college-name h1 {
+    font-family: 'Great Vibes', cursive; /* Use the Google Font */
+    letter-spacing: 2px; /* Optional: Adds a little space between letters */
+    line-height: 1.2; /* Optional: Improves line spacing */
+    font-size: 1.6em;
+    color: brown;  
+    font-weight: bolder;      
+    margin-bottom: 0px;
+    margin-top: 5px;
+}
+
+.college-name span {
+    font-size: 1.0em;
+    color: green;
+    font-weight: bold;
+    font-style: italic;
+}
+
+
+
+
+
+
+
+/* ////////////////////////////////////////////////////////////////////////// */
+/* Date and time styling */
+.date-time {
+    font-size: 1.1em;
+    font-weight: bolder;
+    margin-top: 0px;
+    margin-right: 0px;
+    color: brown; /* color for contrast */
+}
+
+
+
+
+
+/* styling for nav bar */
+/* Container for the entire navigation bar */
+.nav {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 66%;
+    background-color: darkgreen;  /* Ensure it's visible */
+    padding: 10px 0;
+}
+
+
+
+
+/* Link styles within the navigation */
+
+.nav .home {
+    background-color: orange;
+    padding: 0px 20px;
+    color: black;
+    border-radius: 5px;
+}
+
+.nav a {
+    color: white;
+    padding: 14px 20px;
+    text-decoration: none;
+    text-align: center;
+    display: block; /* Ensure the entire padding area is clickable */
+}
+
+
+
+
+
+
+
+/* Container for navigation items */
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+/* Unordered list for navigation items */
+.nav-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+
+
+
+/* Individual navigation items */
+.nav-item {
+    margin: 0 15px;
+}
+
+
+
+
+
+/* Styling for the links */
+.nav-link {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    padding: 14px 20px;
+    display: block; /* Ensure the entire area is clickable */
+}
+
+
+
+
+
+
+/* Hover effect for links with block background */
+.nav-link:hover {
+    background-color: #333; /* Darker background on hover */
+    color: white; /* Text color remains white on hover */
+}
+
+
+
+
+
+
+/* Dropdown menu container */
+.nav .dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+
+
+
+/* Hidden dropdown content styling*/
+.nav .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: orange;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+
+/*
+    top: 100%; /* Positioning directly below the dropdown trigger *
+    left: 0;
+    margin-top: 10px; /* Adds space between the nav item and dropdown *
+*/
+}
+
+
+
+
+
+
+
+
+
+
+/* Dropdown items styling */
+.nav .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+
+
+
+
+/* Show dropdown on hover */
+.nav .dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+
+
+
+/* Basic styling for the navigation bar */
+.nav {
+    display: flex;
+    background-color: green;
+    padding: 10px;
+}
+
+
+
+
+
+.nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    display: block;
+}
+
+
+
+
+/* Hover effects for Nav Buttons(ADD EASE HOVER) */
+.nav a:hover {
+    background-color: orange;
+    color: green;
+    padding: 0px 20px;
+    border-radius: 5px;
+
+    transition: background-color 0.3s ease;
+}
+
+
+
+
+/* Styling for dropdowns */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+
+
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 200px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+
+
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+
+
+/* Show the dropdown content when hovering over the dropdown parent */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+
+/* Adjust dropdown position and behavior */
+.dropdown-content {
+    top: 100%; /* Positions the dropdown directly below the parent */
+    left: 0;
+}
+
+
+
+/* Additional hover effect for dropdown links */
+.dropdown-content a {
+    transition: background-color 0.3s ease;
+}
+
+
+
+
+
+
+/* Styling for slider images */
+
+.slider .indicators .indicator-item {
+    background-color: orange;       
+    border: 3px solid green;
+    -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    -moz-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+}
+
+.slider .indicators .indicator-item.active {
+    background-color: #ffffff;
+}
+
+.slider {
+    width: 1350px;
+    margin: 0 auto;
+
+    margin-top: 90px;
+    margin-left: 0px;
+}
+
+.slider .indicators {
+    bottom: 60px;
+    z-index: 100;
+}
+
+
+
+
+
+/* Styles for about the college */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+
+.container {
+    padding: 10px 20px; /* Shapes the padding border with circular ends */
+    border-radius: 5px; /* Shapes the padding border with circular ends */
+
+    width: 90%;
+    margin: auto;
+    /*padding: 20px;*/
+    background-color: green; /* Updated background color */
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    margin-top: 10px;
+    text-align: center; /* Center align all content */
+}
+
+/* Center-aligned heading */
+.heading {
+    font-size: 36px;
+    color: orange; /* Updated color to match the image */
+    font-weight: bold;
+    margin-bottom: 20px; /* Space between heading and paragraph */
+}
+
+/* Center-aligned content paragraph */
+.content {
+    font-size: 16px;
+    color: white; /* Updated color for readability */
+    line-height: 1.6;
+    max-width: 100%; /* Allow content to take full width */
+    margin: 0 auto; /* Center align paragraph */
+    text-align: center; /* Center-align text */
+}
+
+/* Center-aligned more link */
+.more-link {
+    display: inline-block;
+    margin-top: 20px;
+    font-size: 16px;
+    color: orange;
+    text-decoration: none;
+    border-bottom: 2px solid orange;
+    transition: all 0.3s ease;
+}
+
+.more-link:hover {
+    color: brown; /* Updated hover color to match the image */
+    border-bottom-color: brown; /* Updated border hover color */
+}
+
+
+
+
+
+/* Mandate block styling and hover effect */
+
+/* Container for the three blocks */
+.three-block-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 40px auto;
+    max-width: 1200px;
+}
+
+/* Individual block styling */
+.block {
+    background-color: white; /* Default background color */
+    width: 30%; /* Adjust width for three blocks */
+    padding: 20px;
+    text-align: left;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    border-radius: 5px;
+    position: relative;
+}
+
+.block h3 {
+    font-size: 24px;
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.block p {
+    font-size: 16px;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Hover effects for the blocks */
+.block:hover {
+    background-color: green; /* Background color on hover for the second block */
+    color: white;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.block:hover h3, .block:hover p {
+    color: white; /* Text color change on hover */
+}
+
+/* Specific background color for the second block */
+.block.second {
+    background-color: white; /* Specific color for the second block */
+    color: white;
+}
+
+.block.second:hover {
+    background-color: peru; /* Darker shade on hover for the second block */
+}
+
+.block.second h3, .block.second p {
+    color: black;
+}
+
+/* Icon styling */
+.block-icon {
+    font-size: 40px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.block-icon-wrapper {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.block-icon-wrapper .block-icon {
+    margin-right: 10px;
+}
+
+.block.second .block-icon {
+    color: white; /* Icon color for the second block */
+}
+
+.block:hover .block-icon {
+    color: white; /* Icon color on hover */
+}
+
+/* Ensuring the hover effect changes color for content */
+.block.second:hover .block-icon {
+    color: white;
+}
+
+
+
+
+
+
+/* How To Apply section stylings */
+
+.apply-section {
+    padding: 10px 20px; /* Shapes the padding border with circular ends */
+    border-radius: 5px; /* Shapes the padding border with circular ends */
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: darkgreen;
+    color: white;
+}
+
+.apply-title {
+    font-size: 26px;
+    color: orange;
+    font-weight: bold;
+    margin: 0;
+}
+
+.apply-description {
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 10px 0 0 0;
+}
+
+.apply-button-container {
+    display: flex;
+    align-items: center;
+}
+
+.apply-button {
+    background-color: orange;
+    color: black;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.apply-button:hover {
+    background-color: brown;
+}
+
+
+
+
+
+
+/* Leadership */
+
+.leadership-container {
+    text-align: center;
+}
+
+h5 {
+    display: center;
+    margin-top: 20px;
+    margin-bottom: 25px;
+    font-size: 24px;
+    color: orange;
+    font-weight: bold;
+}
+
+.leadership {
+    display: flex;
+    justify-content: center;
+    gap: 250px;
+}
+
+.leader {
+    text-align: center;
+    max-width: 350px;
+}
+
+.leader img {
+    width: 100%;
+    height: auto;
+    border-radius: 500%;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+.leader h3 {
+    margin: 10px 0 5px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.leader p {
+    font-size: 16px;
+    color: black;
+    margin-bottom: 10px;
+}
+
+
+
+/* Population details stylings*/
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.stats-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: green;
+    padding: 30px 0;
+    color: white;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+
+
+
+.stat {
+    text-align: center;
+}
+
+.stat img {
+    width: 64px;
+    height: 64px;
+    margin-bottom: 10px;
+}
+
+.stat h2 {
+    font-size: 48px;
+    margin: 0;
+}
+
+.stat p {
+    margin: 10px 0 0;
+    font-size: 18px;
+}
+
+
+
+
+
+
+
+
+
+/* All Academic Departments styling */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    text-align: center;
+}
+
+.container {
+    padding: 40px 20px;
+    background-image: url('background.jpg'); /* Set the background image here */
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    margin-bottom: 30px;
+
+    width: 90%;
+}
+
+h1 {
+    font-size: 28px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: orange;
+}
+
+p {
+    font-size: 16px;
+    margin-bottom: 40px;
+    /*font-weight: bold;*/
+}
+
+.department-cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    transition: all 0.3s ease;
+}
+
+.department-card {
+    position: relative;
+    background-color: white;
+    border-radius: 20px;
+    overflow: hidden;
+    width: 300px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.department-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.department-content h3 {
+    margin: 15px;
+    font-size: 12px;
+    /*font-weight: bold;*/
+    color: black;
+    /*text-transform: uppercase;*/
+}
+
+
+.department-content h4 {
+    margin: 15px;
+    font-size: 12px;
+    font-weight: bold;
+    color: black;
+    text-transform: uppercase;
+}
+
+
+
+.department-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 45px;
+    height: 45px;
+    background-color: white;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.department-icon:hover {
+    background-color: brown;
+}
+
+.department-card:hover {
+    background-color: orange;
+}
+
+
+
+
+/*Gallery styling*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.gallery-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding: 20px;
+    gap: 20px;
+    margin-top: 10px;
+}
+
+
+ 
+h11 {
+    font-size: 28px;
+    margin-top: 1000px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: orange;
+}
+
+
+
+.gallery-item {
+    width: calc(25% - 20px); /* Four items per row */
+    position: relative;
+    background-color: #f7f7f7;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-bottom: 3px solid #fff;
+}
+
+.gallery-info {
+    padding: 15px;
+}
+
+.gallery-info h3 {
+    font-size: 18px;
+    color: green;
+    /* font-weight: bold; */
+    margin-bottom: 5px;
+}
+
+.gallery-info p {
+    color:brown;
+    font-size: 14px;
+    font-weight: normal; 
+}
+
+/* Special styles for the More Updates item */
+.more-updates {
+    position: relative;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /*background-color: rgba(0, 0, 0, 0.5); /* Dark overlay */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/*  
+.overlay h3 {
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold; 
+}
+*/
+
+
+
+
+
+
+
+
+
+/* FAQ styling */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 50px;
+    background-color: green;
+    background-image: url('background-image-url-here'); /* Replace with the actual background image URL */
+    background-size: cover;
+    background-position: center;
+    margin-top: 0px;
+}
+
+.contact-item {
+    text-align: center;
+    max-width: 300px;
+}
+
+.contact-item i {
+    font-size: 40px;
+    margin-bottom: 15px;
+    
+}
+
+.contact-item h3 {
+    font-size: 19px;
+    margin-bottom: 10px;
+    color: white;
+    font-weight:bold;
+}
+
+.contact-item p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 5px;
+    color: white;
+    font-weight:normal;
+}
+
+
+
+
+
+
+
+
+/* Quick links styling */
+
+.quick-links-section {
+    display: flex;
+    justify-content: space-around;
+    padding: 40px;
+    background-color: white;
+    color: #333;
+}
+
+.quick-links-column {
+    width: 20%;
+}
+
+.quick-links-column h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: orange;      /* Adjust color for headings */
+}
+
+.quick-links-column p {
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 5px 0;
+    font-weight:normal;
+}
+
+.quick-links-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.quick-links-column ul li {
+    margin-bottom: 10px;
+}
+
+.quick-links-column ul li a {
+    color: #333;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s ease;
+    font-weight:normal;
+}
+
+.quick-links-column ul li a:hover {
+    color: orange; /* Adjust hover color */
+}
+
+
+/* Google map redirect button stylings */
+
+.direction-button {
+    background-color: green; /* Green background */
+    color: white; /* White text */
+    padding: 10px 20px; /* Padding inside the button */
+    font-size: 16px; /* Button text size */
+    border: none; /* Remove borders */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    margin-top: 0px; /* Space above the button */
+    text-align: center; /* Center text */
+}
+
+.direction-button:hover {
+    background-color: orange; /* Darker green on hover */
+}
+
+
+
+
+
+
+
+
+
+
+/* Copyright Styling */
+
+.Copyright {
+    background-color: green;
+    padding: 15px;
+    text-align: center;
+    color: white;
+}
+
+.Copyright p {
+    margin: 0;
+    font-size: 14px;
+}
+
+/* copyright stylings */
+
+.Copyright a {
+    color: orange;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+/* copyright stylings */
+
+.Copyright a:hover {
+    color: brown;
+}
+
+
+/* social media styling*/
+
+
+.social {
+    background-color: green;
+    padding: 15px;
+    text-align: center;
+    color: white;
+}
+
+
+.social-container {
+    display: inline-block;
+}
+
+.social-container p {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.social-icons a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.5em;
+    margin: 0 10px;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 50%;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.social-icons a i {
+    vertical-align: middle;
+}
+
+.social-icons a:nth-child(1) {
+    background-color: #3b5998;
+}
+
+.social-icons a:nth-child(2) {
+    background-color: #010101;
+}
+
+.social-icons a:nth-child(3) {
+    background-color: #e4405f;
+}
+
+.social-icons a:nth-child(4) {
+    background-color: #1da1f2;
+}
+
+.social-icons a:nth-child(5) {
+    background-color: #0077b5;
+}
+
+.social-icons a:nth-child(6) {
+    background-color: #333;
+}
+
+.social-icons a:hover {
+    color: orange;
+    transform: scale(1.1);
+}
+
+@media (max-width: 600px) {
+    .social-icons a {
+        margin: 0 5px;
+        font-size: 1.2em;
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+    }
+}

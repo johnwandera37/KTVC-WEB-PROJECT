@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account Registration</title>
+    <link rel="stylesheet" href="portal-signup.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="left-panel">
+            <img src="images/Manual Arc Welding.jpg" alt="Manual Arc Welding Image" class="background-img">
+            <div class="caption">
+                <h1>Skill Development For A Bright Future</h1>
+            </div>
+        </div>
+        <div class="right-panel">
+            <div class="registration-box">
+                <img src="images/KTVCschoollogo.jpeg" alt="College Logo" class="logo">
+                <h2>Account Registration</h2>
+                <p>To sign up, kindly fill the form below</p>
+                <form>
+                    <label for="username">Username</label>
+                    <input type="text" id="username" placeholder="Student No/ Employee No">
+
+                    <label for="password">Password</label>
+                    <div class="password-container">
+                        <input type="password" id="password" placeholder="Enter your Password">
+                        <i class="fas fa-eye toggle-password"></i>
+                    </div>
+
+                    <label for="confirm-password">Confirm Password</label>
+                    <div class="password-container">
+                        <input type="password" id="confirm-password" placeholder="Confirm your Password">
+                        <i class="fas fa-eye toggle-password"></i> 
+                    </div>
+
+                    <div class="role-selection">
+                        <label>
+                            <input type="radio" name="role" value="Student"> Student
+                        </label>
+                        <label>
+                            <input type="radio" name="role" value="Employee"> Employee
+                        </label>
+                        <label>
+                            <input type="radio" name="role" value="Admin"> Admin
+                        </label>
+                    </div>
+
+                    <button type="submit">Submit</button>
+                </form>
+                <p class="copyright">Copyright © 2024 - Viro Developers</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
