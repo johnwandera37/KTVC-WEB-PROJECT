@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"> 
 
 <head>
     <meta charset="UTF-8">
@@ -19,86 +19,78 @@
 
 <body>
 
-<header class="header">
+<header>
 <div class="header-container">   
     <!-- Logo Section -->
-    <div class="logo-section">
+    <!-- <div class="logo-section"> -->
         <img src="images/mergedlogos.png" alt="Kenya Logo" class="logo">
-        <!-- <img src="images/KTVCschoollogo.jpg" alt="College Logo" class="college-logo"> -->
-    </div>
+    <!-- </div> -->
 
     <!-- College Name -->
     <div class="college-name">
         <h1>Kaloleni Technical and Vocational College</h1>
         <span>The Technologist Hub - (CBET)</span>
-
-
-         <!-- display date and time/////////////////////////////////////////////////// -->
+         <!-- display date and time-->
          <div id="date-time" class="date-time"></div>
-         <script src="main-page.js"></script>
-
-
-
     </div>
-
-    <!-- Nav bar -->
-    <nav class="nav">
-        <a href="#" class="home" id="Home">Home</a>  <!--ID is added to the "Home" section of your HTML so that you can link to it.  -->
-
-        <!-- About Dropdown -->
-        <a class="dropdown-trigger" href="#" data-target="dropdown-about">About</a>
-        <ul id="dropdown-about" class="dropdown-content">
-            <li><a href="#About-the-College">About the College</a></li>   <!-- modify the "About the College" link in the dropdown menu so that it points to this section -->
-            <li><a href="#Our-Mandate">Our Mandate</a></li>  <!-- modify the "Our-Mandate" link in the dropdown menu so that it points to this section -->
-            <li><a href="#Vision-Statement">Vision Statement</a></li>  <!-- modify the "Vision-Statement" link in the dropdown menu so that it points to this section -->
-            <li><a href="#Mission-Statement">Mission Statement</a></li>  <!-- modify the "Mission-Statement" link in the dropdown menu so that it points to this section -->
-            <li><a href="#">Service Charter</a></li>
-            <li><a href="#">Careers</a></li>
-            <li><a href="#">Partners and stakeholders</a></li>
-        </ul>
-
-        <!-- Departments Dropdown -->
-        <a class="dropdown-trigger" href="#" data-target="dropdown-departments">Departments</a>
-        <ul id="dropdown-departments" class="dropdown-content">
-            <li><a href="#Academic-Departments">Mechanical and Automotive Engineering Department</a></li>  <!-- modify "Mechanical and Automotive Engineering Department" link in the dropdown menu so that it points to this section -->
-            <li><a href="#Academic-Departments">Electrical Engineering Department</a></li>  <!-- modify "Electrical Engineering Department" link in the dropdown menu so that it points to this section -->
-            <li><a href="#Academic-Departments">Computing and Informatics Department</a></li>  <!-- modify "Computing and Informatics Department" link in the dropdown menu so that it points to this section -->
-            <li><a href="#Academic-Departments">Building and Civil Engineering Department</a></li>  <!-- modify "Building and Civil Engineering Department" link in the dropdown menu so that it points to this section -->
-            <li><a href="#Academic-Departments">Fashion Design and Cosmetology Department</a></li>  <!-- modify "Fashion Design and Cosmetology Department" link in the dropdown menu so that it points to this section -->
-        </ul>
-
-        <!-- Portals Dropdown -->
-        <a class="dropdown-trigger" href="#" data-target="dropdown-portals">Portals</a>
-        <ul id="dropdown-portals" class="dropdown-content">
-            <li><a href="C:\Users\Administrator\Desktop\KTVC WEB Project\portal login\Portal-Login.html" target="_blank">Student Portal Login</a></li>  <!-- Updated link to redirect -->
-            <li><a href="https://kuccps.net/" target="_blank">KUCCPS Portal</a></li>  <!-- Updated link to redirect -->
-            <li><a href="https://portal.hef.co.ke/auth/signin" target="_blank">HELB Portal</a></li>  <!-- Updated link to redirect -->
-            <li><a href="C:\Users\Administrator\Desktop\KTVC WEB Project\portal login\Portal-Login.html" target="_blank">Staff Portal Login</a></li>  <!-- Updated link to redirect -->
-            <li><a href="C:\Users\Administrator\Desktop\KTVC WEB Project\portal login\Portal-Login.html" target="_blank">Admin Login</a></li>  <!-- Updated link to redirect -->
-        </ul>
-
-        <!-- Media Dropdown -->
-        <a class="dropdown-trigger" href="#" data-target="dropdown-media">Media</a>
-        <ul id="dropdown-media" class="dropdown-content">
-            <li><a href="#">KTVC Blog</a></li>
-            <li><a href="#">News</a></li>
-            <li><a href="#">Events</a></li>
-            <li><a href="#gallery-item">Media Gallery</a></li>  <!-- modify the "Media Gallery" link in the list so that it points to the Media Gallery container section -->
-            <li><a href="#gallery-item">Videos</a></li>  <!-- modify the "Videos" link in the list so that it points to the Media Gallery container section -->
-        </ul>
-
-        <a href="#apply-section">Admission</a>  <!-- modify "Admission" link in the dropdown menu so that it points to this section -->
-        <a href="#">Downloads</a>
-        <a href="C:\Users\Administrator\Desktop\KTVC WEB Project\portal login\Portal-Login.html" target="_blank">LMS</a>  <!-- Updated link to redirect -->
-        <a href="#quick-links-column">Contacts/Map</a>  <!-- modify "Contacts/Map" link in the dropdown menu so that it points to the quick-links section with contact details -->
-    </nav>
 </div>
 </header>
 
-<!-- Include jQuery and Materialize JS -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-<script src="main-page.js"></script>
+<!-- Nav bar -->
+ <div id="toggleMenu" class="flipMenu">Toggle Menu</div>
+<nav class="nav" id="menu">
+    <a href="#" class="active home" id="Home">Home</a>  <!--ID is added to the "Home" section of your HTML so that you can link to it.  -->
+
+    <!-- About Dropdown -->
+    <a class="dropdown-trigger" href="#" data-target="dropdown-about">About</a>
+    <ul id="dropdown-about" class="dropdown-content">
+        <li><a href="#About-the-College">About the College</a></li>   <!-- modify the "About the College" link in the dropdown menu so that it points to this section -->
+        <li><a href="#Our-Mandate">Our Mandate</a></li>  <!-- modify the "Our-Mandate" link in the dropdown menu so that it points to this section -->
+        <li><a href="#Vision-Statement">Vision Statement</a></li>  <!-- modify the "Vision-Statement" link in the dropdown menu so that it points to this section -->
+        <li><a href="#Mission-Statement">Mission Statement</a></li>  <!-- modify the "Mission-Statement" link in the dropdown menu so that it points to this section -->
+        <li><a href="#">Service Charter</a></li>
+        <li><a href="#">Careers</a></li>
+        <li><a href="#">Partners and stakeholders</a></li>
+    </ul>
+
+    <!-- Departments Dropdown -->
+    <a class="dropdown-trigger" href="#" data-target="dropdown-departments">Departments</a>
+    <ul id="dropdown-departments" class="dropdown-content">
+        <li><a href="#Academic-Departments">Mechanical and Automotive Engineering Department</a></li>  <!-- modify "Mechanical and Automotive Engineering Department" link in the dropdown menu so that it points to this section -->
+        <li><a href="#Academic-Departments">Electrical Engineering Department</a></li>  <!-- modify "Electrical Engineering Department" link in the dropdown menu so that it points to this section -->
+        <li><a href="#Academic-Departments">Computing and Informatics Department</a></li>  <!-- modify "Computing and Informatics Department" link in the dropdown menu so that it points to this section -->
+        <li><a href="#Academic-Departments">Building and Civil Engineering Department</a></li>  <!-- modify "Building and Civil Engineering Department" link in the dropdown menu so that it points to this section -->
+        <li><a href="#Academic-Departments">Fashion Design and Cosmetology Department</a></li>  <!-- modify "Fashion Design and Cosmetology Department" link in the dropdown menu so that it points to this section -->
+    </ul>
+
+    <!-- Portals Dropdown -->
+    <a class="dropdown-trigger" href="#" data-target="dropdown-portals">Portals</a>
+    <ul id="dropdown-portals" class="dropdown-content">
+        <li><a href="C:\Users\Administrator\Desktop\KTVC WEB Project\portal login\Portal-Login.html" target="_blank">Student Portal Login</a></li>  <!-- Updated link to redirect -->
+        <li><a href="https://kuccps.net/" target="_blank">KUCCPS Portal</a></li>  <!-- Updated link to redirect -->
+        <li><a href="https://portal.hef.co.ke/auth/signin" target="_blank">HELB Portal</a></li>  <!-- Updated link to redirect -->
+        <li><a href="C:\Users\Administrator\Desktop\KTVC WEB Project\portal login\Portal-Login.html" target="_blank">Staff Portal Login</a></li>  <!-- Updated link to redirect -->
+        <li><a href="C:\Users\Administrator\Desktop\KTVC WEB Project\portal login\Portal-Login.html" target="_blank">Admin Login</a></li>  <!-- Updated link to redirect -->
+    </ul>
+
+    <!-- Media Dropdown -->
+    <a class="dropdown-trigger" href="#" data-target="dropdown-media">Media</a>
+    <ul id="dropdown-media" class="dropdown-content">
+        <li><a href="#">KTVC Blog</a></li>
+        <li><a href="#">News</a></li>
+        <li><a href="#">Events</a></li>
+        <li><a href="#gallery-item">Media Gallery</a></li>  <!-- modify the "Media Gallery" link in the list so that it points to the Media Gallery container section -->
+        <li><a href="#gallery-item">Videos</a></li>  <!-- modify the "Videos" link in the list so that it points to the Media Gallery container section -->
+    </ul>
+
+    <a href="#apply-section">Admission</a>  <!-- modify "Admission" link in the dropdown menu so that it points to this section -->
+    <a href="#">Downloads</a>
+    <a href="C:\Users\Administrator\Desktop\KTVC WEB Project\portal login\Portal-Login.html" target="_blank">LMS</a>  <!-- Updated link to redirect -->
+    <a href="#quick-links-column">Contacts/Map</a>  <!-- modify "Contacts/Map" link in the dropdown menu so that it points to the quick-links section with contact details -->
+</nav>
+
+
+
 
 
 
@@ -108,28 +100,28 @@
     <div class="slider">
         <ul class="slides">
             <li>
-                <img src="images/Image1.jpg"> <!-- random image -->
+                <img src="images/Image1.jpg"> 
                 <div class="caption center-align">
                     <h3>The Technologist Hub</h3>
                     <h5 class="light grey-text text-lighten-3">Motto.</h5>
                 </div>
             </li>
             <li>
-                <img src="images/Image2.jpg"> <!-- random image -->
+                <img src="images/Image2.jpg"> 
                 <div class="caption left-align">
                     <h3>Skills Development For A Bright Future</h3>
                     <h5 class="light grey-text text-lighten-3">Here's our slogan.</h5>
                 </div>
             </li>
             <li>
-                <img src="images/Image3.jpg"> <!-- random image -->
+                <img src="images/Image3.jpg"> 
                 <div class="caption right-align">
                     <h3>To be a regional leader in technical skills development.</h3>
                     <h5 class="light grey-text text-lighten-3">Vision Statement.</h5>
                 </div>
             </li>
             <li>
-                <img src="images/Image4.jpg"> <!-- random image -->
+                <img src="images/Image4.jpg"> 
                 <div class="caption center-align">
                     <h3>To produce technically skilled manpower, to meet the demands of the highly industrializing economy and national development.</h3>
                     <h5 class="light grey-text text-lighten-3">Mission Statement.</h5>
@@ -138,17 +130,14 @@
         </ul>
     </div>
 
-    <!-- Include jQuery and Materialize JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <script src="main-page.js"></script>
+
 
 
 
 
 
 <!-- Details about the college to be displayed below the moving images -->
-<div class="container" id="About-the-College">    <!--ID is added to the "About the College" section of your HTML so that you can link to it.  -->
+<div class="about-content" id="About-the-College">    <!--ID is added to the "About the College" section of your HTML so that you can link to it.  -->
     <div class="heading">About the College</div>
     <div class="content">
 Welcome to Kaloleni Technical and Vocational College, a government owned technical institution providing technical education and training under the Ministry of Education, State Department of Technical, Vocational Education and Training (TVET).
@@ -195,16 +184,16 @@ of change that will transform the highly industrializing economy and national de
 <!-- How to apply section -->
 
 <div class="apply-section" id="apply-section">  <!--ID is added to the "apply-section" section of your HTML so that you can link to it.  -->
-<div class="apply-content">
+<!-- <div class="apply-content"> -->
     <h2 class="apply-title">How to Apply</h2>
     <p class="apply-description">
         The college was established in 2019 under the mentorship of Kenya Coast National Polytechnic (KCNP) and we are proud to be associated with them. We are located at Birini/Mwamleka Sub-location of Chanagande
 location in Kaloleni Constituency, Kilifi County, Kenya.
     </p>
-</div>
-<div class="apply-button-container">
+<!-- </div> -->
+<!-- <div class="apply-button-container"> -->
     <button class="apply-button">Application Form</button>
-</div>
+<!-- </div> -->
 </div>
 
 
@@ -260,9 +249,7 @@ location in Kaloleni Constituency, Kilifi County, Kenya.
 </div>
 
 
-<!-- FontAwesome JS -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
-<script src="main-page.js"></script>
+
 
 
 
@@ -271,11 +258,11 @@ location in Kaloleni Constituency, Kilifi County, Kenya.
 
 <!-- All Academic Departments -->
 
-<div class="container" id="Academic-Departments">  <!--ID is added to the "Academic-Departments" section of your HTML so that you can link to it.  -->
+<div class="department-container" id="Academic-Departments">  <!--ID is added to the "Academic-Departments" section of your HTML so that you can link to it.  -->
 <h1>Academic Departments</h1>
 <p>Head of Departments and their respective messages</p>
 
-<div class="department-cards">
+<div class="department-cards classWidth">
     <!-- Mechanical and Automotive Engineering -->
     <div class="department-card">
         <div class="department-icon">
@@ -284,7 +271,7 @@ location in Kaloleni Constituency, Kilifi County, Kenya.
                 <i class="fas fa-arrow-right"></i>
             </a>
         </div>
-        <img src="images/caro.jpg" alt="Mechanical and Automotive Engineering">
+            <img class="imgContent" src="images/caro.jpg" alt="Mechanical and Automotive Engineering">
         <div class="department-content">
             <h4>HOD Mechanical and Automotive Engineering</h4>
             <h3>Name: Mrs. Caroline Irungu<br>HOD Message:******</h3>
@@ -298,7 +285,7 @@ location in Kaloleni Constituency, Kilifi County, Kenya.
                 <i class="fas fa-arrow-right"></i>
             </a>
         </div>
-        <img src="images/Ndarah.jpeg" alt="Electrical and Electronics Engineering">
+        <img class="imgContent" src="images/Ndarah.jpeg" alt="Electrical and Electronics Engineering">
         <div class="department-content">
             <h4>HOD Electrical and Electronics Engineering</h4>
             <h3>Name: Mr. Alfred Ndara<br>HOD Message:******</h3>
@@ -313,7 +300,7 @@ location in Kaloleni Constituency, Kilifi County, Kenya.
                 <i class="fas fa-arrow-right"></i>
             </a>
         </div>
-        <img src="images/Kendi.jpeg" alt="Building and Civil Engineering">
+            <img class="imgContent" src="images/Kendi.jpeg" alt="Building and Civil Engineering">
         <div class="department-content">
             <h4>HOD Building and Civil Engineering</h4>
             <h3>Name: Mrs. Happiness Kendi<br>HOD Message:******</h3>
@@ -328,7 +315,7 @@ location in Kaloleni Constituency, Kilifi County, Kenya.
                 <i class="fas fa-arrow-right"></i>
             </a>
         </div>
-        <img src="images/Eddie.jpg" alt="Computing and Informatics (ICT)">
+            <img class="imgContent" src="images/Eddie.jpg" alt="Computing and Informatics (ICT)">
         <div class="department-content">
             <h4>HOD Computing and Informatics (ICT)</h4>
             <h3>Name: Mr. Eddie Omondi<br>HOD Message:******</h3>
@@ -343,7 +330,7 @@ location in Kaloleni Constituency, Kilifi County, Kenya.
                 <i class="fas fa-arrow-right"></i>
             </a>
         </div>
-        <img src="images/Image10.jpg" alt="Fashion Design and Cosmetology">
+            <img class="imgContent" src="images/Image10.jpg" alt="Fashion Design and Cosmetology">
         <div class="department-content">
             <h4>HOD Fashion Design and Cosmetology</h4>
             <h3>Name: Mrs. Olive Mungai<br>HOD Message:******</h3>
@@ -352,8 +339,6 @@ location in Kaloleni Constituency, Kilifi County, Kenya.
 </div>
 </div>
 
-<!-- FontAwesome JS -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
 
 
 
@@ -363,7 +348,10 @@ location in Kaloleni Constituency, Kilifi County, Kenya.
 
 <!-- Gallery section -->
 
-<h11>Media Gallery</h11>
+<!-- we have header 1 to 6 visit wrschool -->
+
+<div class="gallery-outerContainer">
+    <h1 class="">Media Gallery</h1>
 
 <div class="gallery-container"  id="gallery-item">  <!--ID is added to the "gallery-container" section of your HTML so that you can link to it.  -->
     <div class="gallery-item">
@@ -393,13 +381,14 @@ location in Kaloleni Constituency, Kilifi County, Kenya.
     <div class="gallery-item">
         <img src="images/Image8.jpg" alt="Mechanical Workshop Area">
         <div class="overlay">
-            <a href="#" class="more-link"><span style="font-size: 24px;"><b>MORE UPDATES<b></span></a>
+            <a href="#" class="more-link"><span ><b>MORE UPDATES<b></span></a>
         </div>
         <div class="gallery-info">
             <h3>Mechanical Workshop Area</h3>
             <p>May 31, 2024</p>
         </div>
     </div>
+</div>
 </div>
 
 
@@ -435,8 +424,7 @@ location in Kaloleni Constituency, Kilifi County, Kenya.
     </div>
 </div>
 
-<!-- Include Font Awesome for icons -->
-<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
 
 
 
@@ -517,8 +505,8 @@ location in Kaloleni Constituency, Kilifi County, Kenya.
 
 <!-- footer social media -->
 
-<div class="social">
-<footer>
+
+<footer class="social">
     <div class="social-container">
         <p>Connect with us</p>
         <div class="social-icons">
@@ -531,9 +519,23 @@ location in Kaloleni Constituency, Kilifi County, Kenya.
         </div>
     </div>
 </footer>
-</div>
 
 
+<!-- Add your scripts here the DOM will find them, do not repeat yourself by adding this scripts multiple times within your code, simply they are added at the head or at the end of body elemnt
+ ensure your code is clean, do this, file like main-page.js usually are added to the body, then the rest of the scripts are added to the head
+ remember the head loads first the the body, so if these sripts like jquery are loaded first in the head they will be available during the time the body is being loaded to the DOM, visit w3school to learn more -->
+ 
+<!-- Include jQuery and Materialize JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+<!-- Include Font Awesome for icons -->
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+
+<!-- FontAwesome JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
+<script src="main-page.js"></script>
 
 </body>
 

@@ -1,4 +1,6 @@
 //////////////////////////////////////////////////////////////////////////
+$(document).ready(function(){ //you wil want to have this guy here, this way you tell the document that jquery is ready. Now you can code in main-page.js with jquery, check w3school on jquery
+
     // Function to update the date and time
     function updateDateTime() {
         const now = new Date();
@@ -32,14 +34,15 @@
 
 
 // initializing the Materialize dropdowns
-$(document).ready(function(){
+
     $('.dropdown-trigger').dropdown();
+
+    //Image Slider
     $('.slider').slider({
         interval: 5000,  // Adjust the interval between slides (in milliseconds)
-        height: 500,     // Adjust the height of the slider
+        height: 700,     // Adjust the height of the slider
         indicators: true // Show indicators for slides
     });
-});
 
 
 
@@ -47,7 +50,7 @@ $(document).ready(function(){
 
 
 
-
+// You have not used your dropdown instance, ensure you use it to make your dropdown menu look better
 // Initialize Materialize dropdowns with adjusted options/////////////
 document.addEventListener('DOMContentLoaded', function() {
     var elems = document.querySelectorAll('.dropdown-trigger');
@@ -64,10 +67,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 // Initialize dropdowns///////////////
-document.addEventListener('DOMContentLoaded', function() {
-    var elems = document.querySelectorAll('.dropdown-trigger');
-    var instances = M.Dropdown.init(elems, { hover: true, coverTrigger: false });
-});
+// You just did this above here repeated code
+// document.addEventListener('DOMContentLoaded', function() {
+//     var elems = document.querySelectorAll('.dropdown-trigger');
+//     var instances = M.Dropdown.init(elems, { hover: true, coverTrigger: false });
+// });
 
 
 
@@ -81,16 +85,14 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
-
-
-//Image Slider
-$(document).ready(function(){
-    $('.slider').slider({
-        interval: 5000,  // Adjust the interval between slides (in milliseconds)
-        height: 500,     // Adjust the height of the slider
-        indicators: true // Show indicators for slides
-    });
-});
+//Image Slider, why did you rewrite this code???
+// $(document).ready(function(){ your file is covered with the ready function
+    // $('.slider').slider({
+    //     interval: 5000,  // Adjust the interval between slides (in milliseconds)
+    //     height: 500,     // Adjust the height of the slider
+    //     indicators: true // Show indicators for slides
+    // });
+// });
 
 
 
@@ -148,3 +150,15 @@ document.querySelector('.apply-button').addEventListener('click', function() {
 
 
 
+
+
+    // Now we want to toggle the menu below screen width of 992px for responsiveness using jquery
+    // Now here is what I want you to do, when a user clicks any of the links make the menu close, also style the drop downs to look better, i know you can handle that you and chat gpt
+    $("#toggleMenu").click("click", function(){
+        // console.log('menu clicked')
+        $("#menu").slideToggle("slow");
+        }
+    );
+
+
+});//jquery ready close function

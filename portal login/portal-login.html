@@ -1,186 +1,93 @@
-<!-- <!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>College Portal</title>
-    <link rel="stylesheet" href="portal-login.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-</head>
+    <link rel="stylesheet" href="portal-login.css" />
+    <link rel="stylesheet" href="../common/formTemplet.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+  </head>
 
-<body>
+  <body>
     <div class="container">
-        <div class="left-panel">
-            <img src="images/LMS background.jpg" alt="College Image" class="campus-img">
-            <div class="caption">
-                <h1>Skill Development For A Bright Future</h1>
-            </div>
+      <div class="left-panel">
+        <img
+          src="images/LMS background.jpg"
+          alt="College Image"
+          class="background-img"
+        />
+        <div class="caption">
+          <h1>Skill Development For A Bright Future</h1>
         </div>
-        <div class="right-panel">
-            <div class="login-box">
-                <img src="images/KTVCschoollogo.jpeg" alt="College Logo" class="logo">
-                <h2>Hello, Welcome To KTVC Portal</h2>
-                <p>Please fill in your details to log in</p>
-                <form>
-                    <label for="username">Username</label>
-                    <input type="text" id="username" placeholder="Student No/ Employee No">
+      </div>
+      <div class="right-panel">
+        <div class="form-box">
+          <div>
+            <img
+              src="images/KTVCschoollogo.jpeg"
+              alt="College Logo"
+              class="logo"
+            />
+            <h2 style=" max-width: 300px;">Hello, welcome to KTVC portal</h2>
+          </div>
+          <div>
+            <p>Please fill in your details to log in</p>
+            <form id="loginForm">
+              <label for="username">Username</label>
+              <input
+                type="text"
+                id="username"
+                placeholder="Student No/ Employee No"
+                required
+              />
 
+              <label for="password">Password</label>
+              <div class="password-container" style="position: relative">
+                <input
+                  type="password"
+                  id="password"
+                  placeholder="Enter your Password"
+                  required
+                />
+                <i
+                  class="fas fa-eye toggle-password"
+                  style="
+                    position: absolute;
+                    right: 10px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    cursor: pointer;
+                  "
+                ></i>
+              </div>
 
+              <div class="remember-forgot">
+                <input type="checkbox" id="rememberMe" name="rememberMe"/>
+                <label for="rememberMe"> Remember me </label>
+              </div>
+              <div class="forgot-password">
+                <a href="portal-forgot-password.html">Forgot Password?</a>
+                <!--FAILED TO LINK TO FORGOT PASSWORD PAGE -->
+                <!-- <a href="C:\Users\Administrator\Desktop\Slider final\portal forgot password\portal-forgot-password.html" target="_blank" class="Forgot-Password">Forgot Password?</a>  
+                 Updated link to redirect -->
+              </div>
 
-
-
-                    <label for="password">Password</label>
-                    <div class="password-container">
-                        <input type="password" id="password" placeholder="Enter your Password">
-                        <i class="fas fa-eye toggle-password"></i>
-                    </div>
-                   
-                    <!-- <label for="password">Password</label> 
-                    <input type="password" id="password" placeholder="Enter your Password">
-
-                    <i class="fas fa-eye toggle-password"></i> 
-                    
-                    --
-
-                    <div class="remember-forgot">
-                        <label>
-                            <input type="checkbox"> Remember me
-                        </label>
-
-
-                        <!-- FAILED Updated link to redirect --
-                        <a href="portal-forgot-password.html">Forgot Password?</a>
-                    </div>
-                    <button type="submit">Sign In</button>
-                </form>
-                <p class="signup">Don't have an account? <a href="C:\Users\Administrator\Desktop\KTVC WEB Project\portal signup\Portal-Signup.html" target="_blank">Sign Up</a></p>  <!-- Updated link to redirect --
-                <p class="copyright">Copyright © 2024 - Viro Developers</p>
-            </div>
+              <button type="submit">Sign In</button>
+            </form>
+            <p class="signup">
+              Don't have an account?
+              <a href="Portal-Signup.html" target="_blank">Sign Up</a>
+            </p>
+          </div>
+          <p class="copyright">Copyright © 2024 - Viro Developers</p>
         </div>
-    </div>
-
-
-    <script src="portal-login.js"></script>
-
-
-
-</body>
-
-</html>
-
--->
-
-
-
-
-<!-- <!DOCTYPE html> --
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>College Portal</title>
-    <link rel="stylesheet" href="portal-login.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-</head>
-
-<body>
-    <div class="container">
-        <div class="left-panel">
-            <img src="images/LMS background.jpg" alt="College Image" class="campus-img">
-            <div class="caption">
-                <h1>Skill Development For A Bright Future</h1>
-            </div>
-        </div>
-        <div class="right-panel">
-            <div class="login-box">
-                <img src="images/KTVCschoollogo.jpeg" alt="College Logo" class="logo">
-                <h2>Hello, Welcome To KTVC Portal</h2>
-                <p>Please fill in your details to log in</p>
-                <form id="loginForm">
-                    <label for="username">Username</label>
-                    <input type="text" id="username" placeholder="Student No/ Employee No">
-
-                    <label for="password">Password</label>
-                    <div class="password-container">
-                        <input type="password" id="password" placeholder="Enter your Password">
-                        <i class="fas fa-eye toggle-password"></i>
-                    </div>
-
-                    <div class="remember-forgot">
-                        <label>
-                            <input type="checkbox"> Remember me
-                        </label>
-                        <a href="portal-forgot-password.html">Forgot Password?</a>
-                    </div>
-                    <button type="submit">Sign In</button>
-                </form>
-                <p class="signup">Don't have an account? <a href="Portal-Signup.html" target="_blank">Sign Up</a></p>
-                <p class="copyright">Copyright © 2024 - Viro Developers</p>
-            </div>
-        </div>
+      </div>
     </div>
 
     <script src="portal-login.js"></script>
-</body>
-
-</html>
- -->
-
-
- <!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>College Portal</title>
-    <link rel="stylesheet" href="portal-login.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-</head>
-
-<body>
-    <div class="container">
-        <div class="left-panel">
-            <img src="images/LMS background.jpg" alt="College Image" class="campus-img">
-            <div class="caption">
-                <h1>Skill Development For A Bright Future</h1>
-            </div>
-        </div>
-        <div class="right-panel">
-            <div class="login-box">
-                <img src="images/KTVCschoollogo.jpeg" alt="College Logo" class="logo">
-                <h2>Hello, Welcome To KTVC Portal</h2>
-                <p>Please fill in your details to log in</p>
-                <form id="loginForm">
-                    <label for="username">Username</label>
-                    <input type="text" id="username" placeholder="Student No/ Employee No" required>
-
-                    <label for="password">Password</label>
-                    <div class="password-container" style="position: relative;">
-                        <input type="password" id="password" placeholder="Enter your Password" required>
-                        <i class="fas fa-eye toggle-password" style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); cursor: pointer;"></i>
-                    </div>
-
-                    <div class="remember-forgot">
-                        <label>
-                            <input type="checkbox"> Remember me
-                        </label>
-                        
-                        <a href="portal-forgot-password.html">Forgot Password?</a>   <!--FAILED TO LINK TO FORGOT PASSWORD PAGE -->
-                        <!-- <a href="C:\Users\Administrator\Desktop\Slider final\portal forgot password\portal-forgot-password.html" target="_blank" class="Forgot-Password">Forgot Password?</a>  <!--Updated link to redirect -->
-                    </div>
-
-                    <button type="submit">Sign In</button>
-                </form>
-                <p class="signup">Don't have an account? <a href="Portal-Signup.html" target="_blank">Sign Up</a></p>
-                <p class="copyright">Copyright © 2024 - Viro Developers</p>
-            </div>
-        </div>
-    </div>
-
-    <script src="portal-login.js"></script>
-</body>
-
+  </body>
 </html>

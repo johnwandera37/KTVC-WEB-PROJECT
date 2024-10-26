@@ -16,153 +16,205 @@ body {
     font-family: Arial, sans-serif;
 }
 
-.header {
-    display: flex;
-    /*flex-direction: column;*/
-    justify-content: space-between;
-    align-items: center;
+header {
+    /* display: flex;
+    flex-direction: column; */
+    /* justify-content: space-between;
+    align-items: center; */
     padding: 10px 20px;
     background-color: #fff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1001;
+    /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
 }
 
 .header-container {
     display: flex;
+    flex-direction: column;
     align-items: center;
     width: 100%;
-
-
-
-
-/* Fixing the header container on top of the page */
-    position: fixed;
-    top: 0;
+    /* position: fixed; */
+    /* top: 0;
     left: 0;
-    width: 100%;
-    z-index: 1000; /* Ensures the nav stays on top of other content */
+    right: 0; */
     background-color: #fff; /* You can change this to suit your design */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow for separation */
+    /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); Optional shadow for separation */
 }
 
 
-@media (max-width: 768px) {
-    .navbar {
-        /* Adjustments for mobile if needed */
-    }
-
-    .content {
-        margin-top: 80px; /* Adjust for mobile nav height */
-    }
-}
-
-
-.content {
-    margin-top: 30px; /* Adjust this based on your navbar height */
-}
+/* .content {
+i think its not doing anything you can get rid of this
+    margin-top: 30px; /
+} */
 
 
 
 
 
-
-.logo-section {
+/* .logo-section {
     display: flex;
+    justify-content: center;
     align-items: center;
-}
+} */
 
 .logo, .college-logo {
     height: 91px;
+    width: auto;
     margin-right: 0px;
 }
 
+.college-name {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
 .college-name h1 {
-    font-family: 'Great Vibes', cursive; /* Use the Google Font */
+    font-family: cursive; /* /////////'Great Vibes', this font is not okay, the default cursive one looks great, try to find one that looks like that/////////// Use the Google Font */
     letter-spacing: 2px; /* Optional: Adds a little space between letters */
     line-height: 1.2; /* Optional: Improves line spacing */
     font-size: 1.6em;
     color: brown;  
     font-weight: bolder;      
     margin-bottom: 0px;
+    text-align: center;
     margin-top: 5px;
 }
 
 .college-name span {
-    font-size: 1.0em;
+    font-size: 1.2em;
     color: green;
     font-weight: bold;
     font-style: italic;
+    text-align: center;
 }
 
 
 
 
-
-
-
-/* ////////////////////////////////////////////////////////////////////////// */
 /* Date and time styling */
 .date-time {
-    font-size: 1.1em;
+    font-size: 1em;
     font-weight: bolder;
     margin-top: 0px;
     margin-right: 0px;
     color: brown; /* color for contrast */
+    text-align: center;
 }
-
-
 
 
 
 /* styling for nav bar */
-/* Container for the entire navigation bar */
-.nav {
+/* The flip is only displayed below 992px */
+/* The menu slides in slow motion during toggling, but the dropdowns configuration is affecting this, make sure your drops are well optimized for 
+this to happen smoothly I know you can do that, you have chat gpt
+So currently it slides well for the home link and then the slow movement is ruined, you can also do a research on the toggling jquery function for the slide animation of the menu*/
+.flipMenu {
+    cursor: pointer;
+    padding: 15px;
+    text-align: center;
+    background-color: green;
+    color: white;
+    font-weight: bold;
+    z-index: 1001;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 66%;
-    background-color: darkgreen;  /* Ensure it's visible */
-    padding: 10px 0;
+    top: 0%;
+    position: -webkit-sticky;
+    position: sticky;
+}
+@media (min-width: 992px) {
+    .flipMenu {
+        display: none;
+    } 
 }
 
+/* Container for the entire navigation bar */
+.nav {
+    z-index: 1000;
+    top: 0%;
+    position: -webkit-sticky;
+    position: sticky;
+    display: flex;
+    gap: 20px;
+    justify-content: space-around;
+    align-items: center;
+    background-color: darkgreen;  /* Ensure it's visible */
+    padding: 20px 0;
+}
 
 
 
 /* Link styles within the navigation */
+/* Use the class active its simple and you can use js to supply the class to the active link */
 
-.nav .home {
+/* .nav .home {
     background-color: orange;
-    padding: 0px 20px;
+    padding: 0px 15px;
     color: black;
     border-radius: 5px;
+} */ 
+
+.nav .active { 
+    /* for the active link you can use js to add this class to the active link */
+    background-color: orange;
 }
 
-.nav a {
+/* .nav a {
     color: white;
     padding: 14px 20px;
     text-decoration: none;
     text-align: center;
-    display: block; /* Ensure the entire padding area is clickable */
+    display: block; 
+} */
+
+.nav a {
+    text-decoration: none;
+    color: white;
+    padding: 6px 10px;
+    text-align: center;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+/* Ensure you visit w3school and learn about media queries and device break points */
+@media (max-width: 992px) {
+    .nav {
+        display: none; /* display only during toggling*/
+        top: 5%;
+        flex-direction: column;
+        gap: 5px;
+        padding: 10px;
+    }
+    .nav a {
+        background-color: #555;
+        width: 100%;
+        margin-bottom: 2px;
+    }
 }
 
 
 
-
+/* Hover effects for Nav Buttons(ADD EASE HOVER) */
+.nav a:hover {
+    background-color: orange;
+    transition: background-color 0.3s ease;
+}
 
 
 
 /* Container for navigation items */
-.navbar {
+/* This does not seem to do anything remove unused classes */
+/* .navbar {
     display: flex;
     justify-content: center;
     align-items: center;
-}
+} */
 
 
 
 
 /* Unordered list for navigation items */
-.nav-list {
+.nav ul li{
     list-style: none;
     padding: 0;
     margin: 0;
@@ -174,34 +226,39 @@ body {
 
 
 /* Individual navigation items */
-.nav-item {
+/* unused code should not exist here */
+/* .nav-item {
     margin: 0 15px;
-}
+} */
 
 
 
 
 
 /* Styling for the links */
-.nav-link {
+/* Unused code */
+/* .nav-link {
     color: white;
     text-decoration: none;
     font-size: 16px;
     transition: background-color 0.3s ease, color 0.3s ease;
     padding: 14px 20px;
-    display: block; /* Ensure the entire area is clickable */
-}
+    display: block; 
+} */
+  /* Ensure the entire area is clickable */
 
 
 
 
 
-
+/* Unused code */
 /* Hover effect for links with block background */
-.nav-link:hover {
-    background-color: #333; /* Darker background on hover */
-    color: white; /* Text color remains white on hover */
-}
+ /* Darker background on hover */
+   /* Text color remains white on hover */
+/* .nav-link:hover {
+    background-color: #333;
+    color: white; 
+} */
 
 
 
@@ -209,10 +266,11 @@ body {
 
 
 /* Dropdown menu container */
-.nav .dropdown {
+/* unused */
+/* .nav .dropdown {
     position: relative;
     display: inline-block;
-}
+} */
 
 
 
@@ -222,10 +280,9 @@ body {
     display: none;
     position: absolute;
     background-color: orange;
-    min-width: 160px;
+    min-width: 200;     /* you can can moify this width to work for toggle menu, to occupy 100% width but ensure your drop down instace in jquery code works well first, where it is displayed, it should not cause overflws like causing scrolls to happen, but only appear below the option from drop down*/
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
-
 /*
     top: 100%; /* Positioning directly below the dropdown trigger *
     left: 0;
@@ -244,11 +301,14 @@ body {
 
 /* Dropdown items styling */
 .nav .dropdown-content a {
+    /* background is transparent not to make the links to take the grey color given to the links below 992 screen */
+    background-color: transparent;
     color: black;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
     text-align: left;
+    transition: background-color 0.3s ease;
 }
 
 
@@ -256,6 +316,7 @@ body {
 
 
 /* Show dropdown on hover */
+/* what does the clas dropdown do? */
 .nav .dropdown:hover .dropdown-content {
     display: block;
 }
@@ -264,50 +325,41 @@ body {
 
 
 
-/* Basic styling for the navigation bar */
-.nav {
+/* Basic styling for the navigation bar 
+You have repeated yourself there is a similar code on top
+*/
+/* .nav {
     display: flex;
     background-color: green;
     padding: 10px;
-}
+} */
 
 
 
-
-
-.nav a {
+/* .nav a {
+repeated code
     color: white;
     text-decoration: none;
     padding: 10px 20px;
     display: block;
-}
+} */
 
-
-
-
-/* Hover effects for Nav Buttons(ADD EASE HOVER) */
-.nav a:hover {
-    background-color: orange;
-    color: green;
-    padding: 0px 20px;
-    border-radius: 5px;
-
-    transition: background-color 0.3s ease;
-}
 
 
 
 
 /* Styling for dropdowns */
-.dropdown {
+/* Not used */
+/* .dropdown {
     position: relative;
     display: inline-block;
-}
+} */
 
 
 
 
-.dropdown-content {
+/* .dropdown-content {
+you like repeating yourself broh your making your code trashy
     display: none;
     position: absolute;
     background-color: #f9f9f9;
@@ -320,11 +372,12 @@ body {
 
 
 .dropdown-content a {
+repeated code
     color: black;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
-}
+} */
 
 
 
@@ -337,24 +390,30 @@ body {
 
 
 /* Show the dropdown content when hovering over the dropdown parent */
-.dropdown:hover .dropdown-content {
+/* repeated code */
+/* .dropdown:hover .dropdown-content {
     display: block;
-}
+} */
 
 
 
 /* Adjust dropdown position and behavior */
-.dropdown-content {
-    top: 100%; /* Positions the dropdown directly below the parent */
+  /* Positions the dropdown directly below the parent
+  never do this, you have a class above called dropdown-content, just add the properties there
+  */
+/* .dropdown-content {
+  
+    top: 100%; 
     left: 0;
-}
+} */
 
 
 
 /* Additional hover effect for dropdown links */
-.dropdown-content a {
+/* this was not necessary you could just add the property for the link in your .dropdown-content a  */
+/* .dropdown-content a {
     transition: background-color 0.3s ease;
-}
+} */
 
 
 
@@ -362,6 +421,29 @@ body {
 
 
 /* Styling for slider images */
+
+.slider {
+/* find out how you can custoizethe jquery slider function to make the slider better, i have only adjusted the height to 700
+find out if you can include css to make the images not touch the left and right margin since css only cannot do that, or if you find a way,
+ currently left and right margin is set to auto
+*/
+    margin: 10px auto;
+    text-shadow: 1px 1px 2px black;
+}
+
+.slider ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.slider li img {
+    width: 100%;
+    object-fit: fill;
+    height: auto;
+}
+
+
 
 .slider .indicators .indicator-item {
     background-color: orange;       
@@ -375,13 +457,6 @@ body {
     background-color: #ffffff;
 }
 
-.slider {
-    width: 1350px;
-    margin: 0 auto;
-
-    margin-top: 90px;
-    margin-left: 0px;
-}
 
 .slider .indicators {
     bottom: 60px;
@@ -393,15 +468,19 @@ body {
 
 
 /* Styles for about the college */
-
-body {
+/* This is wrong body is styled once, you only have one body, when styling body usually do it at the top of css
+remember you have html, head, body, in the body comes the elements that create your documnet
+Visit w3school and learn html, then go to css then javascript you will learn how to do it the right way take your time
+*/
+/* body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f9f9f9;
-}
+} */
 
-.container {
+/* You can't specify same class content several times in your code with differnt properties, make it at least unique not to style others elememnts that have same class i have changed the class from content to about-content */
+.about-content {
     padding: 10px 20px; /* Shapes the padding border with circular ends */
     border-radius: 5px; /* Shapes the padding border with circular ends */
 
@@ -423,19 +502,22 @@ body {
 }
 
 /* Center-aligned content paragraph */
-.content {
+/* do not add any other class with the name content unless it is defined inside another class or id or queryselector
+why, suppose you have two classes with the name content, and they have diffferent properties elements that have the class content will try to apply all the styles
+*/
+.content { 
     font-size: 16px;
     color: white; /* Updated color for readability */
     line-height: 1.6;
     max-width: 100%; /* Allow content to take full width */
-    margin: 0 auto; /* Center align paragraph */
-    text-align: center; /* Center-align text */
+    /* margin: 0 auto; Center align paragraph */
+    /* text-align: center; Center-align text your container has text align center this applies to all children unless specified otherwise*/
 }
 
 /* Center-aligned more link */
 .more-link {
     display: inline-block;
-    margin-top: 20px;
+    margin: 8px;
     font-size: 16px;
     color: orange;
     text-decoration: none;
@@ -457,15 +539,19 @@ body {
 /* Container for the three blocks */
 .three-block-container {
     display: flex;
-    justify-content: space-between;
-    margin: 40px auto;
-    max-width: 1200px;
+    justify-content: space-around;
+    flex-wrap: wrap; /* for responsiveness*/
+    padding: 20px 40px; /*use this instead*/
+    /* margin: 40px auto; */
+    width: 100%;
+    gap: 30px;
 }
 
 /* Individual block styling */
 .block {
     background-color: white; /* Default background color */
-    width: 30%; /* Adjust width for three blocks */
+    height: 350px;
+    width: 340px; /* Adjust width for three blocks ////////for responsiveness use fixed width to apply flex wrap to change from row to column */
     padding: 20px;
     text-align: left;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -473,6 +559,12 @@ body {
     border-radius: 5px;
     position: relative;
 }
+
+@media (max-width: 576px) {
+    .block {
+        width: 100%; 
+    }
+  } 
 
 .block h3 {
     font-size: 24px;
@@ -499,12 +591,13 @@ body {
 }
 
 /* Specific background color for the second block */
-.block.second {
-    background-color: white; /* Specific color for the second block */
+/* Not necessary the class block covers that */
+/* .block.second {
+    background-color: white;
     color: white;
-}
+} */
 
-.block.second:hover {
+.second:hover { /* No need for the .block class you simple add different class to one class attribute*/
     background-color: peru; /* Darker shade on hover for the second block */
 }
 
@@ -516,31 +609,35 @@ body {
 .block-icon {
     font-size: 40px;
     margin-bottom: 10px;
-    color: #333;
+    /* color: #333;  This works with text only*/
 }
 
 .block-icon-wrapper {
     display: flex;
     align-items: center;
     margin-bottom: 20px;
+    gap: 10px;
 }
 
-.block-icon-wrapper .block-icon {
+/* just use gap in flex */
+/* .block-icon-wrapper .block-icon {
     margin-right: 10px;
-}
+} */
 
-.block.second .block-icon {
-    color: white; /* Icon color for the second block */
-}
+/* .block .second .block-icon {
+Thats an emoji I dont think if this applies it wont work
+    color: white; 
+} */
 
-.block:hover .block-icon {
-    color: white; /* Icon color on hover */
-}
+/* .block:hover .block-icon {
+    color: white; 
+} */
 
 /* Ensuring the hover effect changes color for content */
-.block.second:hover .block-icon {
+/* I dont think if this code is working you get rid of it */
+/* .block.second:hover .block-icon {
     color: white;
-}
+} */
 
 
 
@@ -552,8 +649,9 @@ body {
 .apply-section {
     padding: 10px 20px; /* Shapes the padding border with circular ends */
     border-radius: 5px; /* Shapes the padding border with circular ends */
-
+    margin: 20px;
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     align-items: center;
     padding: 20px 50px;
@@ -571,13 +669,13 @@ body {
 .apply-description {
     font-size: 16px;
     line-height: 1.6;
-    margin: 10px 0 0 0;
+    margin: 10px 0; /*specify top and bottom margin, left and right is 0*/
 }
 
-.apply-button-container {
+/* .apply-button-container {
     display: flex;
     align-items: center;
-}
+} */
 
 .apply-button {
     background-color: orange;
@@ -616,13 +714,20 @@ h5 {
 
 .leadership {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     gap: 250px;
 }
+@media (max-width: 992px) {
+    .leadership {
+        gap: 150px;
+    }
+  } 
+
 
 .leader {
     text-align: center;
-    max-width: 350px;
+    width: 350px; /*rem ove min for flex wrapping*/
 }
 
 .leader img {
@@ -649,27 +754,32 @@ h5 {
 
 /* Population details stylings*/
 
-body {
+/* body { This is wrong you only specify this once at the top, remember you have only one body, one head, and html
     font-family: Arial, sans-serif;
-}
+} */
 
 .stats-container {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
     background-color: green;
     padding: 30px 0;
     color: white;
-    margin-top: 50px;
-    margin-bottom: 50px;
-}
-
-
-
-
-.stat {
+    /* margin-top: 50px;
+    margin-bottom: 50px; */
+    margin: 50px 20px;
+    gap: 15px;
     text-align: center;
+    border-radius: 5px;
 }
+
+
+
+
+/* .stat {
+    text-align: center; just add this in your stats-container, ensure you remove unused classes from your html, the sta class is still used for the img dont remove it
+} */
 
 .stat img {
     width: 64px;
@@ -679,7 +789,7 @@ body {
 
 .stat h2 {
     font-size: 48px;
-    margin: 0;
+    /* margin: 0; this is unnecessary*/
 }
 
 .stat p {
@@ -696,23 +806,26 @@ body {
 
 
 /* All Academic Departments styling */
-body {
+/* 4th time this is wrong, never do this you have already done this at the top of this css file */
+/* body {
     margin: 0;
     font-family: Arial, sans-serif;
     background-color: #f5f5f5;
     text-align: center;
-}
+} */
 
-.container {
+/* Ensure you keep track of all classes names, you have another class up there that styles the header content, this messes up both elements that uses the class container  so i have updated the class name*/
+.department-container {
     padding: 40px 20px;
-    background-image: url('background.jpg'); /* Set the background image here */
-    background-size: cover;
-    background-position: center;
+    /* background-image: url('background.jpg');Set the background image here, check your imae */
+    /* background-size: cover; */
+    /* background-position: center; */
     color: white;
+    background-color: green;
     text-align: center;
-    margin-bottom: 30px;
-
-    width: 90%;
+    margin: 30px 20px;
+    border-radius: 5px;
+    /* width: 90%; */
 }
 
 h1 {
@@ -723,7 +836,8 @@ h1 {
 }
 
 p {
-    font-size: 16px;
+    /* ensure if you have properties for example p tag properties that might be the same just create one element and supply to the rest, makes your work easier practice this hack */
+    font-size: 16px; 
     margin-bottom: 40px;
     /*font-weight: bold;*/
 }
@@ -731,25 +845,33 @@ p {
 .department-cards {
     display: flex;
     justify-content: center;
+    align-items: center;
     gap: 20px;
+    flex-wrap: wrap;
     transition: all 0.3s ease;
 }
 
 .department-card {
     position: relative;
     background-color: white;
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    justify-content: center;
     border-radius: 20px;
-    overflow: hidden;
-    width: 300px;
+    box-sizing: border-box;
+    /* overflow: hidden; */
+    padding: 10px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    width: 300px;
 }
 
 .department-card img {
+    border-radius: 10px 10px 0 0;
     width: 100%;
-    height: 180px;
+    height: 250px;
     object-fit: cover;
 }
-
 .department-content h3 {
     margin: 15px;
     font-size: 12px;
@@ -797,54 +919,68 @@ p {
 
 
 
+
+
 /*Gallery styling*/
 
-* {
+/* This is wrong you are repeating yourself, remember the "*" styles the general/ all elements and is added at the top once */
+/* * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+} */
+
+.gallery-outerContainer {
+    margin: 20px 20px;
 }
 
 
 .gallery-container {
     display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
+    justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
     padding: 20px;
     gap: 20px;
     margin-top: 10px;
 }
 
-
- 
-h11 {
+/* h1{
+you do not need this, there is a h1 element that has exact the same properties in this same css file, don't repeat yourself
     font-size: 28px;
     margin-top: 1000px;
     margin-bottom: 10px;
     font-weight: bold;
     color: orange;
-}
-
-
+} */
 
 .gallery-item {
-    width: calc(25% - 20px); /* Four items per row */
+    width: calc(25% - 20px);  /* Four items per row */
+    height: 330px;
     position: relative;
     background-color: #f7f7f7;
     border-radius: 10px;
-    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    /* overflow: hidden; */
 }
 
 .gallery-item img {
     width: 100%;
-    height: auto;
-    display: block;
-    border-bottom: 3px solid #fff;
+    height: 50%;
+    border-radius: 10px 10px 0 0;
+    /* display: block; */
+    /* border-bottom: 3px solid #fff; */
 }
 
 .gallery-info {
-    padding: 15px;
+    border-radius: 0 0 10px 10px;
+    padding: 0 10px;
+    margin-top: 10px;
 }
 
 .gallery-info h3 {
@@ -857,25 +993,37 @@ h11 {
 .gallery-info p {
     color:brown;
     font-size: 14px;
-    font-weight: normal; 
+    font-weight: normal;
 }
 
 /* Special styles for the More Updates item */
-.more-updates {
+/* .more-updates {
     position: relative;
-}
+} */
 
 .overlay {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    top: 30%;
+    text-shadow: 1px solid blueviolet 1px solid blueviolet 2px black;
+    /* top: 0;
+    left: 0; */
+    /* width: 100%;
+    height: 100%; */
     /*background-color: rgba(0, 0, 0, 0.5); /* Dark overlay */
-    display: flex;
+    /* display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center; */
 }
+
+@media (max-width: 992px) {
+    .gallery-item {
+        width: 300px;
+    }
+    .gallery-item img {
+        height: 80%;
+    }
+  } 
+
 /*  
 .overlay h3 {
     color: #fff;
@@ -901,27 +1049,29 @@ h11 {
 }
 
 .contact-container {
+    margin: 10px 20px;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    flex-wrap: wrap;
     align-items: center;
+    gap: 15px;
     padding: 50px;
     background-color: green;
     background-image: url('background-image-url-here'); /* Replace with the actual background image URL */
     background-size: cover;
     background-position: center;
-    margin-top: 0px;
 }
 
 .contact-item {
     text-align: center;
-    max-width: 300px;
+    width: 300px;
 }
-
+/* 
+if this code is not styling anything just remove it
 .contact-item i {
     font-size: 40px;
     margin-bottom: 15px;
-    
-}
+} */
 
 .contact-item h3 {
     font-size: 19px;
@@ -948,16 +1098,26 @@ h11 {
 /* Quick links styling */
 
 .quick-links-section {
+    margin: 10px 20px;
     display: flex;
-    justify-content: space-around;
-    padding: 40px;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 20px;
+    padding: 20px;
     background-color: white;
     color: #333;
 }
 
 .quick-links-column {
-    width: 20%;
+    width: 250px;
+    padding: 5px;
 }
+
+@media (max-width: 610px) {
+    .quick-links-column {
+        width: 100%;
+    }
+  } 
 
 .quick-links-column h3 {
     font-size: 18px;
@@ -1027,7 +1187,7 @@ h11 {
 
 .Copyright {
     background-color: green;
-    padding: 15px;
+    padding: 15px 20px;
     text-align: center;
     color: white;
 }
@@ -1073,12 +1233,19 @@ h11 {
     margin-bottom: 10px;
     color: white;
 }
+.social-icons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
 
 .social-icons a {
     text-decoration: none;
     color: #fff;
     font-size: 1.5em;
-    margin: 0 10px;
+    /* margin: 0 10px; */
     display: inline-block;
     width: 40px;
     height: 40px;
@@ -1087,9 +1254,9 @@ h11 {
     transition: background-color 0.3s ease-in-out;
 }
 
-.social-icons a i {
+/* .social-icons a i {
     vertical-align: middle;
-}
+} */
 
 .social-icons a:nth-child(1) {
     background-color: #3b5998;
